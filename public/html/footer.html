@@ -5,8 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="/public/css/style.css" />
   </head>
   <body>
-    <div>this is footer</div>
+    <div>
+      <p>회사명 : 메리나라 대표 : 똥메리</p>
+      <p>영업시간 : 09:00 ~ 13:00 전화번호 : 010-6404-4325</p>
+      <p>주소 : 경남 양산시 명곡로 141 유탑유블레스아파트 104동 1801호</p>
+      <p>Copyright(c)2021. All rights reserved by minju</p>
+    </div>
   </body>
+  <script type="text/javascript">
+    $(function () {
+      stickyFooter();
+
+      $(window).scroll(stickyFooter).resize(stickyFooter);
+    });
+
+    function stickyFooter() {
+      document_height = $(document).height(); // 문서 전체 높이
+      document_scrollTop = $(document).scrollTop(); // 문서 전체 높이 중 스크롤 위치
+      window_height = $(window).height(); // 창 높이
+      footer_height = $('footer').height();
+
+      gap = document_height - footer_height - window_height;
+      bottom = document_scrollTop - gap;
+
+      if (document_scrollTop > gap) {
+        $('footer').css('bottom', bottom + 'px');
+      } else {
+        $('footer').css('bottom', '0');
+      }
+    }
+  </script>
 </html>

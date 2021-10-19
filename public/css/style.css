@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  width: 100%;
+}
+header {
+  width: 100%;
+  text-align: center;
+  padding: 16px 0;
+}
+nav {
+  width: 100%;
+  justify-content: center;
+}
+nav > ul {
+  display: flex;
+  flex-direction: inherit;
+  justify-content: space-around;
+  background-color: darkblue;
+  color: aliceblue;
+}
+footer {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  padding: 25px 20px;
+  background-color: rgb(46, 46, 46);
+  color: aliceblue;
+}
+footer > div > p {
+  padding: 10px 0px;
+}
